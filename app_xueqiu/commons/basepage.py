@@ -65,6 +65,7 @@ class BasePage(object):
         # self.error_num = 0 这里重置的语法好像有问题？？
         return result
 
+    @MyWraps()
     def finds(self, by, locator=None):
         if locator is None:
             return self.driver.find_elements(*by)
