@@ -1,0 +1,48 @@
+mem_create:
+  "method": "post"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/create"
+  "json":
+    "userid": ${userid}
+    "mobile": ${mobile}
+    "name": ${name}
+    "department":
+      - ${department}
+
+mem_get:
+  "method": "get"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/get?userid=${userid}"
+
+
+mem_update:
+  "method": "post"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/update"
+  "json":
+    "userid": ${userid}
+    "name": ${name}
+
+mem_delete:
+  "method": "get"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/delete?userid=${userid}"
+
+tag_create:
+  "method": "post"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/create"
+  "json":
+    "tagname": ${tagname}
+    "tagid": ${tagid}
+
+tag_get:
+  "method": "get"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/get?tagid=${tagid}"
+
+tag_update:
+  "method": "post"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/update"
+  "json":
+    "tagid": ${tagid}
+    "tagname": ${tagname}
+
+tag_delete:
+  "method": "get"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/delete?tagid=${tagid}"
+
